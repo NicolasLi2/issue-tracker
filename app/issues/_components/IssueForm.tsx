@@ -40,6 +40,7 @@ export default function IssueForm({ issue }: { issue?: Issue }) {
       else await axios.post('/api/issues', data);
 
       router.push('/issues');
+      router.refresh();
     } catch (error) {
       setSubmitting(false);
       setError('An unexpected error occurred.');
