@@ -26,7 +26,7 @@ export default function DeleteIssueButton({ issueId }: { issueId: number }) {
             <Button
               color='red'
               onClick={async () => {
-                await axios.delete('/api/issues' + issueId);
+                await axios.delete('/api/issues/' + issueId);
                 router.push('/issues');
                 router.refresh();
               }}
