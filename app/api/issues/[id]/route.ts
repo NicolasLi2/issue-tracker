@@ -1,4 +1,4 @@
-import { authOptions } from '@/app/auth/authOpeions';
+import { authOptions } from '@/app/auth/authOption';
 import { issueSchema } from '@/app/validationSchema';
 import prisma from '@/prisma/client';
 import { getServerSession } from 'next-auth';
@@ -38,7 +38,7 @@ export async function DELETE(
 ) {
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({}, { status: 401 });
-  
+
   // await delay(2000);
   const issue = await prisma.issue.findUnique({
     where: { id: parseInt(params.id) },
