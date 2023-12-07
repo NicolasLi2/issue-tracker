@@ -24,7 +24,7 @@ export default async function IssueDetailPage({ params }: Props) {
 
   if (!issue) notFound();
 
-  // delay(2000);
+  // delay(20000);
 
   return (
     // in Radix-UI "sm" means 768px, equivalent to "md" in tailwind

@@ -14,7 +14,7 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
-  // when use adapter, next-auth change session strategy to JWT to database,
+  // when use adapter, next-auth change session strategy from JWT to database,
   // but database strategy does not work with OS providers like Google,
   // so need to set session strategy to JWT
   session: {
